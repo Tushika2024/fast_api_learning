@@ -25,3 +25,5 @@ model_validator for more than one field data validaton get complete pydantic mod
 computed field the field which is created dynamically
 
 nested models => ek model ko kisi aur model ke ek field ki tarah ki use krne lago
+
+serialisation=> to export pydantic model objects in the form of python dictionary or json
