@@ -1,0 +1,27 @@
+/docs for getting documentation
+
+pydantic use for data validation(range) , type validation(data type) because python is dynamic typed language no data type decleration same variable get int or string
+
+from typing import List, Dict
+    It tells Python (and tools like FastAPI, editors, linters) that a variable should contain a list of a specific type.
+    allergies: List[str]
+    contact_details: Dict[str,str](to also specify the data type of elements of list)
+
+EmailStr AnyUrl (built in data types ensures data validation)
+
+Field for data validation , +Annotated => also to attach metadata
+
+typecoercing=> if float and pass '75.2'(string) then pydantic autommtically typecoerce it to float
+    but may also input wrong values  ## strict=True stop typecoercing
+
+field validator operate in 2 mode before  and after mode
+    mode='before' data get paased to filed validator before typecoercing
+    (so if int and passed str so error)
+    mode='after' data get typecoerced then get passed(by default)
+    field validator only for single field
+
+model_validator for more than one field data validaton get complete pydantic model
+
+computed field the field which is created dynamically
+
+nested models => ek model ko kisi aur model ke ek field ki tarah ki use krne lago
